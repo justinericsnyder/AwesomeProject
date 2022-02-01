@@ -12,6 +12,7 @@ import { ColorSchemeName, Pressable } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+import LeagueChampScrollView from '../screens/LeagueChampScrollViewScreen';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
@@ -87,11 +88,20 @@ function BottomTabNavigator() {
       <BottomTab.Screen
         name="TabTwo"
         component={TabTwoScreen}
-        options={{
+        options={({ navigation }: RootTabScreenProps<'TabTwo'>) => ({
           title: 'Tab Two',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
+        })}
       />
+      <BottomTab.Screen
+        name="Champions"
+        component={LeagueChampScrollView}
+        options={({ navigation }: RootTabScreenProps<'Champions'>) => ({
+          title: 'Champions',
+          tabBarIcon: ({ color }) => <TabBarIcon name="info" color={color} />,
+        })}
+      />
+
     </BottomTab.Navigator>
   );
 }

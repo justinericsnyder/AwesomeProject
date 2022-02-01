@@ -25,6 +25,11 @@ const linking: LinkingOptions<RootStackParamList> = {
               TabTwoScreen: 'two',
             },
           },
+          Champions: {
+            screens: {
+              LeagueChampScrollView: 'Champions',
+            },
+          },
         },
       },
       Modal: 'modal',
