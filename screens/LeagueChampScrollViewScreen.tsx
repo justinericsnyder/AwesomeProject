@@ -9,29 +9,24 @@ import _ from "lodash";
 
 export default function LeagueChampScrollViewScreen({navigation} : RootTabScreenProps < 'Champions' >) {
 const [championData, setChampionData] = useState <Array<string>>([])
-const [activeState, setActiveState] = useState(false)
-   
-  const loadChampionData = async () => {
-      const champData = await(await getAllChampionsNames()).data;
-      const headers = _.keys(champData);
-      setChampionData(headers);
 
-  }
-    loadChampionData().then(p =>{
-      championData.forEach(function(element){
-      
-      })
-    });
-   
+  useEffect(() => {
+  const loadChampionData = async () => {
+    const champData = await getAllChampionsNames();
+    const headers = _.keys(champData.data);
+    
+    setChampionData(headers);
+    }
+    loadChampionData()
+  }, []) 
     
 
     return(
-      <View style={styles.container}>
-      {championData.length > 157 &&
-         championData.map((key) => {
-            <Text style={styles.title}> {key} </Text>
-          })} 
-      </View>
+      <ScrollView contentContainerStyle={styles.container}>
+      {championData.length > 0 &&
+         championData.map((key) => <Text key={key} style={styles.title}> {key} </Text>
+      )} 
+      </ScrollView>
             
     );
     
@@ -41,9 +36,7 @@ const [activeState, setActiveState] = useState(false)
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+
   },
   title: {
     fontSize: 20,
