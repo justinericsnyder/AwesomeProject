@@ -12,7 +12,7 @@ import { ColorSchemeName, Pressable } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import LeagueChampScrollView from '../screens/LeagueChampScrollViewScreen';
+import LeagueChampScrollViewScreen from '../screens/LeagueChampScrollViewScreen';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
@@ -59,10 +59,18 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="Champions"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
       }}>
+      <BottomTab.Screen
+        name="Champions"
+        component={LeagueChampScrollViewScreen}
+        options={({ navigation }: RootTabScreenProps<'Champions'>) => ({
+          title: 'Champions',
+          tabBarIcon: ({ color }) => <TabBarIcon name="info" color={color} />,
+        })}
+      />
       <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}
@@ -93,14 +101,7 @@ function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         })}
       />
-      <BottomTab.Screen
-        name="Champions"
-        component={LeagueChampScrollView}
-        options={({ navigation }: RootTabScreenProps<'Champions'>) => ({
-          title: 'Champions',
-          tabBarIcon: ({ color }) => <TabBarIcon name="info" color={color} />,
-        })}
-      />
+
 
     </BottomTab.Navigator>
   );

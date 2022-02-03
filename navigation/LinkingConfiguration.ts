@@ -27,7 +27,7 @@ const linking: LinkingOptions<RootStackParamList> = {
           },
           Champions: {
             screens: {
-              LeagueChampScrollView: 'Champions',
+              LeagueChampScrollViewScreen: 'Champions',
             },
           },
         },
