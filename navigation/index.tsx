@@ -16,9 +16,9 @@ import LeagueChampScrollViewScreen from '../screens/LeagueChampScrollViewScreen'
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import { AntDesign, MaterialIcons } from '@expo/vector-icons';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -68,15 +68,15 @@ function BottomTabNavigator() {
         component={LeagueChampScrollViewScreen}
         options={({ navigation }: RootTabScreenProps<'Champions'>) => ({
           title: 'Champions',
-          tabBarIcon: ({ color }) => <TabBarIcon name="info" color={color} />,
+          tabBarIcon: ({ color }) => <TabBarIcon name="users" color={color} />,
         })}
       />
       <BottomTab.Screen
         name="TabOne"
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Your Accounts',
+          tabBarIcon: ({ color }) => <MaterialIcons name="switch-account" size={30} color={color} />,
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Modal')}
@@ -93,16 +93,6 @@ function BottomTabNavigator() {
           ),
         })}
       />
-      <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
-        options={({ navigation }: RootTabScreenProps<'TabTwo'>) => ({
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        })}
-      />
-
-
     </BottomTab.Navigator>
   );
 }
