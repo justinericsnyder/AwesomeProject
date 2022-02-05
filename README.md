@@ -9,7 +9,18 @@
   </a>
 </p>
 
-> Champion Reference using React-Native, DDragon, and Riot API's
+
+
+
+### Description & Screenshots
+Champion Reference using React-Native, DDragon, and Riot API's
+><img alt="Screenshot" src="https://user-images.githubusercontent.com/54219592/152650755-e2d3013d-7992-401c-a755-9e58d6de69e0.png" height="300px" />
+><img alt="Screenshot" src="https://user-images.githubusercontent.com/54219592/152650747-09f13ec7-25e4-4a5e-aa4b-03e5d08c592e.png" height="300px" />
+><img alt="Screenshot" src="https://user-images.githubusercontent.com/54219592/152650753-14d3b6b1-d548-47d3-aa48-1e63a80c2a22.png" height="300px" />
+><img alt="Screenshot" src="https://user-images.githubusercontent.com/54219592/152650756-f1532e6e-1f0a-49fb-8944-93861a65fa20.png" height="300px" />
+><img alt="Screenshot" src="https://user-images.githubusercontent.com/54219592/152650758-cf4edbf0-e036-467a-8e0d-b39f1b9d2ecb.png" height="300px" />
+><img alt="Screenshot" src="https://user-images.githubusercontent.com/54219592/152650759-f0c7ca54-f3b9-42ab-ace1-c1202f225bb9.png" height="300px" />
+
 
 ### 🏠 [Homepage](https://360around365.com)
 
