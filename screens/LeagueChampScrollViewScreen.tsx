@@ -95,14 +95,14 @@ function getTagColor(tag) {
       return "#e74c3c";
     case 'Tank':
       return "#2c3e50";
-      case 'Support':
-        return "#2ecc71";
-        case 'Marksman':
-          return "#3498db";
-          case 'Mage':
-            return "#9b59b6";
-            case 'Assassin':
-              return "#e67e22";     
+    case 'Support':
+      return "#2ecc71";
+    case 'Marksman':
+      return "#3498db";
+    case 'Mage':
+      return "#9b59b6";
+    case 'Assassin':
+      return "#e67e22";
     default:
       return "#000000";
   }
