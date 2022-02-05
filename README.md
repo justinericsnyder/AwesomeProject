@@ -47,4 +47,3 @@ Copyright © 2022 [Justin Snyder](https://github.com/justinericsnyder).<br />
 This project is [Creative Commons Zero v1.0 Universal](https://github.com/justinericsnyder/Champion-List-React-Native/blob/master/LICENSE) licensed.
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
