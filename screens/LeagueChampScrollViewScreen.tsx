@@ -11,6 +11,9 @@ import { FontAwesome } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Searchbar } from 'react-native-paper';
 import { FaTags } from "react-icons/fa";
+import {MaterialCommunityIcons} from '@expo/vector-icons';
+
+import { white } from "react-native-paper/lib/typescript/styles/colors";
 
 //Componsent being defined for the world to see. Tyler you too. 
 export default function LeagueChampScrollViewScreen({navigation} : RootTabScreenProps < 'Champions' >) {
@@ -71,12 +74,16 @@ const onChangeSearch = (query: string)  => setSearchQuery(query);
                               )}
                           </View>
                       </View>
+                      <Pressable   style={styles.statsContainer} onPress={() => {navigation.navigate('Modal', champion)}} >
+                          <MaterialCommunityIcons label="Test" style={styles.selector} size={24} name="spider-web" color={'#fff'}/>
+                          <Text style={styles.LoreLabel}>Stats</Text>
+                      </Pressable>
                       <Pressable   style={styles.abilitiesContainer} onPress={() => {navigation.navigate('Modal', champion)}} >
-                          <FontAwesome label="Test" style={styles.selector} size={36} name="magic" color={'#0984e3'}/>
+                          <FontAwesome label="Test" style={styles.selector} size={24} name="magic" color={'#fff'}/>
                           <Text style={styles.LoreLabel}>Abilities</Text>
                       </Pressable>
                       <Pressable   style={styles.selectContainer} onPress={() => {navigation.navigate('Modal', champion)}} >
-                          <AntDesign label="Test" style={styles.selector} size={36} name="book" color={'#0984e3'}/>
+                          <AntDesign label="Test" style={styles.selector} size={24} name="book" color={'#fff'}/>
                           <Text style={styles.LoreLabel}>Lore</Text>
                       </Pressable>
                   </View>
@@ -157,9 +164,15 @@ const styles = StyleSheet.create({
   selectContainer: {
     height: '100%',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignSelf: 'center',
-
+    padding: 10,
+    borderLeftColor: "#fff",
+    borderLeftWidth: 1,
+    borderRightColor: "#fff",
+    borderRightWidth: 1,
+    marginRight: 8,
+    backgroundColor: '#c38452',
   },
   selector: {
     alignSelf: 'center',
@@ -168,17 +181,30 @@ const styles = StyleSheet.create({
   LoreLabel: {
     fontSize: 8,
     alignSelf: "center",
-    marginRight: 5,
+    color: 'white',
+  },  
+  statsContainer: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignContent: 'center',
+    alignSelf:"center",
+    padding: 10,
+    borderLeftColor: "#fff",
+    borderLeftWidth: 1,
+    backgroundColor: 'rgb(52, 152, 219)'
   },
 
   abilitiesContainer: {
     height: '100%',
     display: 'flex',
-    flexDirection: 'column',
-      alignContent: 'center',
-    marginRight: 10,
+    flexDirection: 'row',
+    alignContent: 'center',
     alignSelf:"center",
-
+    padding: 10,
+    borderLeftColor: "#fff",
+    borderLeftWidth: 1,
+    backgroundColor: 'rebeccapurple'
   },
   abilitiesSelector: {
     alignSelf: 'center',
@@ -187,7 +213,7 @@ const styles = StyleSheet.create({
   },
   abilitiesLabel: {
     fontSize: 8,
-    marginRight: 5,
+    color: 'white',
   },
   outerContainer: {
     display: 'flex',
