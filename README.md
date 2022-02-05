@@ -5,7 +5,7 @@
     <img alt="License: Creative Commons Zero v1.0 Universal" src="https://img.shields.io/badge/License-Creative Commons Zero v1.0 Universal-yellow.svg" />
   </a>
   <a href="https://twitter.com/just\_in\_O365" target="_blank">
-    <img alt="Twitter: just\_in\_O365" src="https://img.shields.io/twitter/follow/just\_in\_O365.svg?style=social" />
+    <img alt="Twitter: just_in_O365" src="https://img.shields.io/twitter/follow/just\_in\_O365.svg?style=social" />
   </a>
 </p>
 
