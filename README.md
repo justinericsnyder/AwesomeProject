@@ -4,8 +4,8 @@
   <a href="https://github.com/justinericsnyder/Champion-List-React-Native/blob/master/LICENSE" target="_blank">
     <img alt="License: Creative Commons Zero v1.0 Universal" src="https://img.shields.io/badge/License-Creative Commons Zero v1.0 Universal-yellow.svg" />
   </a>
-  <a href="https://twitter.com/just\_in\_O365" target="_blank">
-    <img alt="Twitter: just\_in\_O365" src="https://img.shields.io/twitter/follow/just\_in\_O365.svg?style=social" />
+  <a href="https://twitter.com/Just_In_O365" target="_blank">
+    <img alt="Twitter: @Just_in_O365" src="https://img.shields.io/twitter/follow/just_in_O365.svg?style=social" />
   </a>
 </p>
 
@@ -20,12 +20,6 @@ npm install
 ```
 
 ## Usage
-
-```sh
-npm run start
-```
-
-## Run tests
 
 ```sh
 expo start
@@ -53,4 +47,3 @@ Copyright © 2022 [Justin Snyder](https://github.com/justinericsnyder).<br />
 This project is [Creative Commons Zero v1.0 Universal](https://github.com/justinericsnyder/Champion-List-React-Native/blob/master/LICENSE) licensed.
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
