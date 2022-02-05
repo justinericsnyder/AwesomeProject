@@ -6,6 +6,8 @@
 import { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 import { CompositeScreenProps, NavigatorScreenParams } from '@react-navigation/native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { ChampionData } from './services/ddragon/interfaces';
+
 
 declare global {
   namespace ReactNavigation {
@@ -15,7 +17,7 @@ declare global {
 
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
-  Modal: undefined;
+  Modal: NavigatorScreenParams<ChampModalParamList> | undefined;
   NotFound: undefined;
 };
 
@@ -23,6 +25,10 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
   RootStackParamList,
   Screen
 >;
+export type ChampModalParamList = {
+  champion: ChampionData;
+}
+
 
 export type RootTabParamList = {
   TabOne: undefined;

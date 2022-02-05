@@ -3,15 +3,14 @@ import { Text, View } from '../../components/Themed';
 import { StyleSheet } from 'react-native';
 
 interface DataLore {
-    lore: string,
-    hidden: boolean
+    lore: string | undefined,
+    hidden?: boolean | undefined
 }
 
 const Lore = (data: DataLore) => {
     return (
         <View>
             <Text >{data.lore}</Text>
-            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
         </View>
     )
 }

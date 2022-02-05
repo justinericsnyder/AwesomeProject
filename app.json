@@ -2,7 +2,7 @@
   "expo": {
     "name": "ChampionList",
     "slug": "championlist-slug",
-    "version": "1.0.1",
+    "version": "1.0.6",
     "sdkVersion": "44.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -22,7 +22,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.just.championlist",
-      "buildNumber": "1.0.5"
+      "buildNumber": "1.0.6"
     },
     "android": {
       "adaptiveIcon": {
@@ -30,7 +30,7 @@
         "backgroundColor": "#ffffff"
         
       },
-      "versionCode": 5,
+      "versionCode": 6,
       "package": "com.justin.championlist"
     },
     "web": {

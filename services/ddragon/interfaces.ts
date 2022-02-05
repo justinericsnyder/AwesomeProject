@@ -111,7 +111,7 @@ interface ChampionStats {
 }
 
 export interface ChampionData {
-    name: ReactNode;
+    name: string;
     allytips: string[],
     blurb: string,
     enemytips: string[],
